@@ -33,13 +33,9 @@ namespace CoreDepartman.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Detay")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.HasKey("Id");
 
-                    b.ToTable("Departmans");
+                    b.ToTable("Departmans", (string)null);
                 });
 
             modelBuilder.Entity("CoreDepartman.Models.Personel", b =>
@@ -64,7 +60,7 @@ namespace CoreDepartman.Migrations
 
                     b.HasKey("PerId");
 
-                    b.ToTable("Personels");
+                    b.ToTable("Personels", (string)null);
                 });
 #pragma warning restore 612, 618
         }

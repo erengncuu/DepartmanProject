@@ -9,6 +9,5 @@ namespace CoreDepartman.Models
         public int Id { get; set; }
         public string DepartmanName { get; set;}
 
-        public string Detay { get; set;}
     }
 }
