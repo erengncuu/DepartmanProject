@@ -16,8 +16,8 @@
         <tr>
             <td>@item.Id</td>
             <td>@item.DepartmanName</td>
-            <td><a href="#" class="btn btn-danger">Sil</a></td>
-            <td><a href="#" class="btn btn-success">Update</a></td>
+            <td><a asp-controller="Depart" asp-action="DeleteDepartman" asp-route-id="@item.Id" class="btn btn-danger">Sil</a></td>
+            <td><a asp-controller="depart" asp-action="DepartmanGetir" asp-route-id="@item.Id" class="btn btn-success">Update</a></td>
             <td><a href="#" class="btn btn-secondary">details</a></td>
         </tr>
     }

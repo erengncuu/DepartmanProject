@@ -1,5 +1,10 @@
-﻿Q@@@@@
+﻿@model CoreDepartman.Models.Departman
 
 
-{
-}
+    <form class="form-group" method="post">
+    
+        <b>Departman Adı</b> 
+        @Html.TextBoxFor(x =>x.DepartmanName, new {@class="form-control"})
+    <br />
+    <button class="btn btn-info">Departman ekle</button>
+    </form>

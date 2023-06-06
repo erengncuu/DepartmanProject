@@ -1,0 +1,13 @@
+﻿@model  Departman
+
+@using (Html.BeginForm("UpdateDepartman","Depart",FormMethod.Post))
+{
+    <br />
+    <b>Departman ID</b>
+    @Html.TextBoxFor(x => x.Id, new { @class = "form-control" })
+    <br />
+    <b>Departman Adı</b>
+    @Html.TextBoxFor(x => x.DepartmanName, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-info">Update the staff</button>
+}
