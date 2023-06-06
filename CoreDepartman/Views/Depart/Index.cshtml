@@ -1,4 +1,22 @@
-﻿@{
-    Layout = "_Views_Shared__TestLayout";
- }
+﻿@model List<Departman>
+@{
+
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>Departmans ID</th>
+        <th>Departmans</th>
+        <th>Delete</th>
+        <th>Update</th>
+        <th>Details</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.DepartmanName</td>
+        </tr>
+    }
+</table>
 
