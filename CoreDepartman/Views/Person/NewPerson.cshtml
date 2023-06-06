@@ -1,0 +1,14 @@
+﻿@model CoreDepartman.Models.Personel
+
+<form class="form-group" method="post">
+
+    <b>Staff Name</b>
+    @Html.TextBoxFor(x => x.FirstName, new { @class = "form-control" })
+    <br />
+    <b>Staff LastName</b>
+    @Html.TextBoxFor(x => x.LastName, new { @class = "form-control" })
+    <br />
+    <b>City</b>
+    @Html.TextBoxFor(x => x.City, new { @class = "form-control" })
+    <button class="btn btn-info">Add Staff</button>
+</form>

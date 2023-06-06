@@ -11,5 +11,15 @@ namespace CoreDepartman.Controllers
             var deger = c.Personels.ToList();
             return View(deger);
         }
+        [HttpGet]
+        public IActionResult NewPerson() 
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult NewPerson(Personel p)
+        {
+            return View();
+        }
     }
 }
