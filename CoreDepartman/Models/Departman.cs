@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using CoreDepartman.Models;
+using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.DataAnnotations;
 
 namespace CoreDepartman.Models
@@ -9,5 +10,8 @@ namespace CoreDepartman.Models
         public int Id { get; set; }
         public string DepartmanName { get; set;}
 
+        public IList<Personel> personels { get; set; }
+
     }
 }
+
