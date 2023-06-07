@@ -19,7 +19,9 @@ namespace CoreDepartman.Controllers
         [HttpPost]
         public IActionResult NewPerson(Personel p)
         {
-            return View();
+            c.Personels.Add(p);
+            c.SaveChanges();
+            return RedirectToAction("Index");
         }
         public IActionResult DeletePerson(int id)
         {
