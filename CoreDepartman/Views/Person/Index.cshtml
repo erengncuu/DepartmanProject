@@ -14,10 +14,11 @@
             <td>@item.FirstName</td>
             <td>@item.LastName</td>
             <td>@item.City</td>
-            <td><a asp-controller="" asp-action="" asp-route-id="@item.PerId" class="btn btn-danger">Delete</a></td>
-            <td><a asp-controller="" asp-action="" asp-route-id="@item.PerId" class="btn btn-success">Update</a></td>
+            <td><a asp-controller="Person" asp-action="DeletePerson" asp-route-id="@item.PerId" class="btn btn-danger">Delete</a></td>
+            <td><a asp-controller="Person" asp-action="EditPerson" asp-route-id="@item.PerId" class="btn btn-success">Update</a></td>
             <td><a class="btn btn-secondary">Details</a></td>
 
         </tr>
     }
 </table>
+<a asp-controller="Person" asp-action="NewPerson" class="btn btn-primary">Add Person</a>

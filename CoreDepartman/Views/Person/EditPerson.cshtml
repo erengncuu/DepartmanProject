@@ -1,0 +1,20 @@
+﻿@model Personel
+
+@using (Html.BeginForm("EditPerson", "Depart", FormMethod.Post))
+{
+    <br />
+    <b>Person ID</b>
+    @Html.TextBoxFor(x => x.PerId, new { @class = "form-control" })
+    <br />
+    <b>Person Name</b>
+    @Html.TextBoxFor(x => x.FirstName, new { @class = "form-control" })
+    <br />
+    <b>Person LastName</b>
+    @Html.TextBoxFor(x => x.LastName, new { @class = "form-control" })
+    <br />
+    <b>Person City</b>
+    @Html.TextBoxFor(x => x.City, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-info">Update the staff</button>
+}
+
