@@ -11,5 +11,8 @@
     <b>City</b>
     @Html.TextBoxFor(x => x.City, new { @class = "form-control" })
     <br />
+    <b>which positon</b>
+    @Html.DropDownListFor(x=>x.Departman.DepartmanName,(List<SelectListItem>)ViewBag.dgr,new {@class="form-control"})
+    <br />
     <button class="btn btn-info">Add Staff</button>
 </form>

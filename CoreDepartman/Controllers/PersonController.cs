@@ -1,5 +1,7 @@
 ﻿using CoreDepartman.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 
 namespace CoreDepartman.Controllers
 {
@@ -8,12 +10,18 @@ namespace CoreDepartman.Controllers
         Context c = new Context();
         public IActionResult Index()
         {
-            var deger = c.Personels.ToList();
+            var deger = c.Personels.Include(x=>x.Departman).ToList();
             return View(deger);
         }
         [HttpGet]
         public IActionResult NewPerson() 
-        {
+        {   
+            List<SelectListItem> degerler =(from x in c.Departmans.ToList() select new SelectListItem
+                                                                                        {
+                                                                                         Text=x.DepartmanName,
+                                                                                         Value=x.Id.ToString()
+                                                                                         }).ToList();
+            ViewBag.Dgr = degerler;
             return View();
         }
         [HttpPost]

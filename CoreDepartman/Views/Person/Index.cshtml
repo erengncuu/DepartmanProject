@@ -1,9 +1,11 @@
 ﻿@model List<Personel>
 <table class="table table-bordered">
     <tr>
+        <th>Id</th>
         <th>Name</th>
         <th>Last Name</th>
         <th>City</th>
+        <th>Departman</th>
         <th>Delete</th>
         <th>Update</th>
         <th>Details</th>
@@ -11,9 +13,11 @@
     @foreach (var item in Model)
     {
         <tr>
+            <td>@item.PerId</td>
             <td>@item.FirstName</td>
             <td>@item.LastName</td>
             <td>@item.City</td>
+            <td>@item.Departman.DepartmanName</td>
             <td><a asp-controller="Person" asp-action="DeletePerson" asp-route-id="@item.PerId" class="btn btn-danger">Delete</a></td>
             <td><a asp-controller="Person" asp-action="EditPerson" asp-route-id="@item.PerId" class="btn btn-success">Update</a></td>
             <td><a class="btn btn-secondary">Details</a></td>
