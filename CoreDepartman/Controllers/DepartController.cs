@@ -42,5 +42,10 @@ namespace CoreDepartman.Controllers
             c.SaveChanges();
             return RedirectToAction("Index");
         }
+        public IActionResult DetailsStaff(int id)
+        {
+            var degerler = c.Personels.Where(x=>x.DepartmanId==id).ToList();
+            return View(degerler);
+        }
     }
 }

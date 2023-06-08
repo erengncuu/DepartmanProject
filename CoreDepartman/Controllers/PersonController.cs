@@ -24,9 +24,12 @@ namespace CoreDepartman.Controllers
             ViewBag.Dgr = degerler;
             return View();
         }
+      
         [HttpPost]
         public IActionResult NewPerson(Personel p)
         {
+            var per = c.Departmans.Where(x => x.Id == p.Departman.Id).FirstOrDefault();
+            p.Departman = per;
             c.Personels.Add(p);
             c.SaveChanges();
             return RedirectToAction("Index");

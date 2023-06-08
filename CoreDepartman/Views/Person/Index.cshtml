@@ -8,7 +8,7 @@
         <th>Departman</th>
         <th>Delete</th>
         <th>Update</th>
-        <th>Details</th>
+
     </tr>
     @foreach (var item in Model)
     {
@@ -20,7 +20,7 @@
             <td>@item.Departman.DepartmanName</td>
             <td><a asp-controller="Person" asp-action="DeletePerson" asp-route-id="@item.PerId" class="btn btn-danger">Delete</a></td>
             <td><a asp-controller="Person" asp-action="EditPerson" asp-route-id="@item.PerId" class="btn btn-success">Update</a></td>
-            <td><a class="btn btn-secondary">Details</a></td>
+           
 
         </tr>
     }
