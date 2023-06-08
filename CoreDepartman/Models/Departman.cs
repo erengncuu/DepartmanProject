@@ -10,7 +10,7 @@ namespace CoreDepartman.Models
         public int Id { get; set; }
         public string DepartmanName { get; set;}
 
-        public IList<Personel> personels { get; set; }
+        public ICollection<Personel> personels { get; set; }
 
     }
 }
