@@ -1,4 +1,5 @@
 ﻿using CoreDepartman.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CoreDepartman.Controllers
@@ -6,6 +7,7 @@ namespace CoreDepartman.Controllers
     public class DepartController : Controller
     {
         Context c = new Context();
+        [Authorize]
         public IActionResult Index()
         {
             var degerler = c.Departmans.ToList();

@@ -30,7 +30,7 @@ namespace CoreDepartman.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int?>("AdminId"));
 
-                    b.Property<string>("Kullanici")
+                    b.Property<string>("UserName")
                         .HasColumnType("Varchar(20)");
 
                     b.Property<string>("password")
@@ -38,7 +38,7 @@ namespace CoreDepartman.Migrations
 
                     b.HasKey("AdminId");
 
-                    b.ToTable("admins");
+                    b.ToTable("Admins");
                 });
 
             modelBuilder.Entity("CoreDepartman.Models.Departman", b =>

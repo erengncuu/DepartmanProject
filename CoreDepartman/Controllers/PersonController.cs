@@ -1,4 +1,5 @@
 ﻿using CoreDepartman.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -8,6 +9,7 @@ namespace CoreDepartman.Controllers
     public class PersonController : Controller
     {
         Context c = new Context();
+        [Authorize]
         public IActionResult Index()
         {
             var deger = c.Personels.Include(x=>x.Departman).ToList();

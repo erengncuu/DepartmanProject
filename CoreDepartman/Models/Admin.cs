@@ -8,7 +8,7 @@ namespace CoreDepartman.Models
         [Key]
         public int? AdminId { get; set; }
         [Column(TypeName ="Varchar(20)")]
-        public string? Kullanici { get; set; }
+        public string? UserName { get; set; }
         [Column(TypeName = "Varchar(10)")]
         public string? password { get; set; }
     }

@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CoreDepartman.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20230609074641_test2")]
+    [Migration("20230609091121_test2")]
     partial class test2
     {
         /// <inheritdoc />
@@ -33,7 +33,7 @@ namespace CoreDepartman.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int?>("AdminId"));
 
-                    b.Property<string>("Kullanici")
+                    b.Property<string>("UserName")
                         .HasColumnType("Varchar(20)");
 
                     b.Property<string>("password")
@@ -41,7 +41,7 @@ namespace CoreDepartman.Migrations
 
                     b.HasKey("AdminId");
 
-                    b.ToTable("admins");
+                    b.ToTable("Admins");
                 });
 
             modelBuilder.Entity("CoreDepartman.Models.Departman", b =>
